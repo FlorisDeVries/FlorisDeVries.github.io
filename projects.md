@@ -11,7 +11,7 @@ in_sidebar: true
 # Games and gamejams
 
 ## Blast Off!
-Together with [Niels Mulder](ncmulder.me), I implemented a simulation of the solar system in Unity(with our own physics). To make the "game" a game we also created a level system where the player has to try and shoot a rocket from one planet to another within a less accurate simulation... Would be waaaay to difficult to play otherwise :). And as a cherry on the cake we also included a sandbox mode in which you can try and create your very own solar system! You could even try to make one with multiple suns?? Check it out [here](https://github.com/FlorisDeVries/INFOMGP_Project)!
+Together with [Niels Mulder](www.ncmulder.me), I implemented a simulation of the solar system in Unity(with our own physics). To make the "game" a game we also created a level system where the player has to try and shoot a rocket from one planet to another within a less accurate simulation... Would be waaaay to difficult to play otherwise :). And as a cherry on the cake we also included a sandbox mode in which you can try and create your very own solar system! You could even try to make one with multiple suns?? Check it out [here](https://github.com/FlorisDeVries/INFOMGP_Project)!
 
 ## Dodger
 This is a solo project where I tried making a really simple game within a limited amount of time with the sole purpose of actually publishing a game! Well guess what: I both somewhat finished the game as well as published it to the play store!
