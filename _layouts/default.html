@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}" style="align-content: center">{{ site.title | default: site.github.repository_name }}</a></h1>
+        
+        {% if site.logo %}
+        <a href="{{ "/" | absolute_url }}"><img src="{{site.logo | relative_url}}" alt="Logo" class="logo" /></a>
+        {% endif %}
+
+        
+
+
+        <p class="view"><a href="{{ site.github.owner_url }}" target="_blank">GitHub</a></p>
+        <p class="view"><a href="https://www.linkedin.com/in/floris-devries/" target="_blank">LinkedIn</a></p>
+        <hr>
+        
+        {% for page in site.pages %}
+        {% if page.in_sidebar %}
+        <a href="{{ page.url | absolute_url }}">
+            {{ page.title }}
+        </a>
+        </br>
+        {% endif %}
+        {% endfor %}
+
+    </br>
+        <hr>
+        {% for post in site.posts limit:3 %}
+            <a href="{{ post.url | absolute_url }}">
+                {{ post.title }} | {{ post.date | date: "%-d %B %Y" }}
+            </a>
+            </br>
+        {% endfor %}
+        {% if site.posts.size > 3 %}
+        <a href="/blog.html">More...</a>
+        {% endif %}
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+    </div>
+  </body>
+</html>
