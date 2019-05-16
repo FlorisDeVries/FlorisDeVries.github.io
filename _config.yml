@@ -1,0 +1,9 @@
+theme: jekyll-theme-minimal
+repository: FlorisDeVries.github.io
+
+title: Floris de Vries
+description: My portfolio
+author: Floris de Vries
+logo: assets/images/pf.png
+google_analytics: UA-119605097-1
+permalink: pretty
