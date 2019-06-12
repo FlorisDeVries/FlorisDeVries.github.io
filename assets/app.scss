@@ -1,0 +1,85 @@
+---
+layout: compress
+---
+
+@charset 'utf-8';
+@import 'bootstrap';
+
+@import 'layout';
+@import 'nav';
+@import 'header';
+@import 'main';
+
+* {
+    box-sizing: border-box;
+  }
+
+  .logo {
+    border-radius: 50%;
+    border: 3px solid rgba(50, 50, 50, 0.8);
+    width: 35%;
+    vertical-align: middle;
+}
+
+.subheading {
+    float: right;
+    font-size: 100%;
+}
+
+.headline {
+    // background-image: url(../assets/images/banner.jpg);
+    // background-size: cover; 
+    // background-position: center;
+
+    background-color: rgb(100, 100, 100);
+    color: rgba(225, 225, 225, 0.8);
+}
+
+.headercontainer {
+    font-size: 5%;
+    width: 50%;
+    
+    margin: auto;
+}
+
+.headercontainer h1 {
+  background: rgba(0, 0, 0, 0);
+}
+
+.headercontainer h2 {
+    background: rgba(0, 0, 0, 0);
+}
+
+.footer {
+    background: rgb(230, 230, 230);
+    height: fit-content;
+    vertical-align: middle;
+    align-content: center;
+}
+
+.icon {
+    float: right;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    vertical-align: middle;
+    float: left;
+    width: 50%;
+    height: 50px;
+    line-height: 30px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

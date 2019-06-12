@@ -1,9 +1,17 @@
-theme: jekyll-theme-minimal
-repository: FlorisDeVries.github.io
-
-title: Floris de Vries
-description: My portfolio
+title: Floris de Vries - Portfolio
+description: My Portfolio
+sitename: Portfolio - Floris de Vries
 author: Floris de Vries
-logo: assets/images/pf.png
-google_analytics: UA-119605097-1
-permalink: pretty
+logo: assets/images/pf.jpg
+banner: assets/images/banner.jpg
+sass:
+  sass_dir: /assets/_sass
+  style: :compressed
+collections:
+  - features
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE.txt
+  - CNAME

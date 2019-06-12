@@ -1,0 +1,11 @@
+<header>
+  <div class='headline'>
+    <div class='headercontainer'>
+      <h1>{{ page.heading }}</h1>
+      {% if site.logo %}
+      <img src="{{site.logo | relative_url}}" alt="Logo" class="logo" />
+      {% endif %}
+      <h2>{{ page.subheading }}</h2>
+    </div>
+  </div>
+</header>
