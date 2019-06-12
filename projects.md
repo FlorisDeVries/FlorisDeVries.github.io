@@ -21,3 +21,6 @@ Check it out [here](https://play.google.com/store/apps/details?id=com.FlorisDeV.
 ## Mars Walker
 Together with [Roxanne Giling](https://github.com/Roxanne13579), I created a Mars exploration game where the player controls curiosity and has to research some rocks on mars... Exciting right? Well there might just be something more to it...
 You can check it out [here](https://github.com/FlorisDeVries/MarsWalker3D)
+
+# More to come
+During the course of my Bachelor/Master and Minor I have ofcourse created a variety of different smaller projects as assignments, I am currently trying to see which of these are finished enough to be put on this list of somewhat more "finished" games.
