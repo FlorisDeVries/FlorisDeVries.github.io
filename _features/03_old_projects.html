@@ -1,0 +1,40 @@
+---
+id: previous_projects
+name: previous_Projects
+heading: Portfolio Timeline
+subheading: What projects do I want to show?
+---
+<main>
+  {% assign left = false %}
+  {% for project in site.projects %}
+  {% if left == true %}
+  <h3>{{ project.title }}</h3>
+  {% else %}
+  <h3 style="text-align: right;">{{ project.title }}</h3>
+  {% endif %}
+  <table>
+
+    {% if left == true %}
+    <th style="width: 25%;">
+      <img class="thumbnail" style="width: 75%;" src="{{project.logo}}" />
+    </th>
+    <th style="width: 5%;"></th>
+    {% else %}
+    {% endif %}
+    <th>
+      <div class='lead'>{{ project.content }}</div>
+    </th>
+
+    {% if left == false %}
+    <th style="width: 5%;"></th>
+    <th style="width: 25%;">
+      <img class="thumbnail" style="width: 100%;" src="{{project.logo}}" />
+    </th>
+    {% assign left = true  %}
+    {% else %}
+    {% assign left = false  %}
+    {% endif %}
+  </table>
+  {% endfor %}
+
+</main>

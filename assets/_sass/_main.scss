@@ -10,8 +10,22 @@ main {
     &.pull-right {  margin-left: 40px;  }
   }
 
+  img.thumbnail {
+    
+  }
+
   h2 {
     font-size: 50px;
+    span { @extend .text-muted; }
+  }
+
+  h3 {
+    font-size: 40px;
+    span { @extend .text-muted; }
+  }
+  
+  h3 {
+    font-size: 25px;
     span { @extend .text-muted; }
   }
 

@@ -3,15 +3,19 @@ description: My Portfolio
 sitename: Portfolio - Floris de Vries
 author: Floris de Vries
 logo: assets/images/pf.jpg
+pf: assets/images/pf.png
 banner: assets/images/banner.jpg
 sass:
   sass_dir: /assets/_sass
   style: :compressed
 collections:
   - features
+  - projects
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - LICENSE.txt
   - CNAME
+kramdown:
+  parse_block_html: true

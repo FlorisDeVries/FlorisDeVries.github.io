@@ -15,4 +15,5 @@ During the master's programme C++ was introduced to me. Even though I've become 
 With these languages I have completed a wide variety of projects from training an agent to walk with AI to implementing an interactive real-time ray tracer and path tracer.
 
 When I'm not busy working or studying I love to play games or watch series. I'll always find Rocket league interesting to play, with an infinite skill ceiling and more unintended mechanics being "discovered" so now and then. Plus let's face it... who doesn't love ramming their car into a ball and then flying off with it?
-Other games/genres that I really enjoy are: RTS(AoE, C&C, SC2), FPS, Puzzle-games, and simulation/building games(Factorio, CIV, AoW).
+
+Other games/genres that I really enjoy are: TD(Dungeon defenders), RTS(AoE, C&C, SC2), FPS, Puzzle-games, and simulation/building games(Factorio, CIV, AoW).
