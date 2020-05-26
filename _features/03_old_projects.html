@@ -4,13 +4,20 @@ name: previous_Projects
 heading: Portfolio Timeline
 subheading: What projects do I want to show?
 ---
+
+<b>The following is a timeline to show some of the projects that I have worked on, either as a solo developer or as part of a team.</b>  
+  The courses during both my bachelor's and master's programme were very practical, because of this I have finished numurous other projects.
+  However, since most of these have either really simple/ugly interfaces, or no interfaces at all I thought it would be best to make a selection.
+  I have chosen to show the following projects since I enjoyed creating them and/or am proud of the results.
+  I try to share my source-code for the showcased projects, however for some I am unable to do so.
+
 <main>
   {% assign left = false %}
   {% for project in site.projects %}
   {% if left == true %}
-  <h3>{{ project.title }}</h3>
+  <h3><b>{{ project.title }}</b></h3>
   {% else %}
-  <h3 style="text-align: right;">{{ project.title }}</h3>
+  <h3 style="text-align: right;"><b>{{ project.title }}</b></h3>
   {% endif %}
   <table>
 
