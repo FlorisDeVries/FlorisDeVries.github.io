@@ -2,16 +2,13 @@ main {
   hr { margin: 80px 0; }
   section { overflow: hidden; }
 
-  img {
+  img.rounded {
     @extend .img-circle;
     @extend .img-responsive;
 
     &.pull-left {  margin-right: 40px;  }
     &.pull-right {  margin-left: 40px;  }
-  }
 
-  img.thumbnail {
-    
   }
 
   h2 {

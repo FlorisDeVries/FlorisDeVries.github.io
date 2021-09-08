@@ -5,10 +5,9 @@ heading: Current Project
 subheading: What am I currently working on?
 ---
 
-<!-- ![alt text]({site.logo | relative_url} "Logo Title Text 1") -->
 
-# Tower Defence RPG
-[TDRPG](https://github.com/FlorisDeVries/TDRPG) is my current hobby project that I just started. This nameless game is purely a hobby project of mine, used to learn more about game development in Unity and work on a game, which I myself would really enjoy.
-Most of the game concepts are still somewhat vague, however the main core mechanic is something that I want to focus on. The intent is for the game to become an RPG game, where the player can spawn towers to defend himself and some objectives, combined with a chaotic hack and slash feel. For me this means that the player will also have the ability to fight!
-My current focus is creating a solid game loop, getting the game feel right, and making sure most things interact with eachother for more engaging gameplay.
-<!-- TODO: Add blog link? -->
+# Temple of Bastet
+[Temple of Bastet](https://bitbucket.org/FlorisDeVries/templeofbastet/) is my current hobby project. This project is meant to be a fun and learnfull experiment to further extend my game design and game development skills.
+The games main focus is around defending and expanding your treasure. You, as the player, want to raid as many temples as possible to collect more and more powerful artifacts, which in turn can be used to build better defences around your treasure, or power up your character. While raiding temples you need to ensure you find a safe exit route, because once you have found the artifacts you need to make a run for it!
+
+I am planning on showing my progress and struggles in a montly update in [this blog](blog).

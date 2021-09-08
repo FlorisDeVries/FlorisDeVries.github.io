@@ -1,0 +1,13 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+  	{% include blogNavigation.html %}
+  	{{ content }}
+  	<script src='{{ site.baseurl }}/assets/app.js'></script>
+	</body>
+</html>
+{% include footer.html %}

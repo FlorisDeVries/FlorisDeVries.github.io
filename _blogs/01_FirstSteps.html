@@ -1,0 +1,79 @@
+---
+id: first_steps
+heading: First steps
+subheading: Initial blog post
+datum: 09/09/2021
+---
+
+Welcome to my very first dev blog!
+<br/> <br/>
+For this project I want to try something new: Keeping track and sharing my progress via a blog. For me this is an interesing experiment to see whether I am able to keep up with monthly blog updates and if keeping a blog will increase overall motivation for my current project.
+In this first dev blog I want to give you an introduction to my game, cover my practical project setup and talk about the current progress of the game... While hopefully keeping the overall blog somewhat short.
+
+<h3><b>Game introduction</b></h3>
+Let's start with an introduction to the games main concepts. Temple of Bastet is, as the title suggests, set in an egyptian world. In this world the protagonist plays the role of Bastet, an egyptian godess.
+The Temple of Bastet was raided and all the powerful artifacts were stolen and scattered throughout the world, in raider camps, pyramids and many more interesting locations. 
+<br/>
+<b>Your goal</b> is to collect these treasures, while also defending whatever artifacts you have remaining. By retrieving these artifacts you slowly get your original powers back, but be careful, since your life-force also depends on having some shiny treasure!
+<br/>
+At the start of each game you only have one artifact remaining, if this gets stolen it's game over. However, having such a small treasure means you can still easily carry it with you making it easier to protect while exploring and raiding the first few sites.
+Once you start to collect more and more artifact you at some point should place down you treasure (in a strategic position), since it will start to slow you down. But not to worry, at this point you will have regained some of your powers and therefore you should be able to place some basic defenses around your treasure!
+<br/><br/>
+For now I think this is a nice short introduction to the games theme and main goal. More about raiding sites and other components such as skills, enemies, temporary/permanent rewards, and many more will follow later.
+
+
+<h3><b>Project setup</b></h3>
+I also want to share some more technical details on how I set my project up, what tools I'm using and how I set goals and keep track of my progress. Each blog dev this technical section may be filled with something completely different.
+This could range from anything between describing the implementation of a complex mechanic, shader magic or just a project setup... Like this dev blog. 
+<br/>
+This is something I want to share, since I rarely see it discussed anywhere in blogs or devlogs like mine. For me the project setup is really important to keep an overview of all my current, past and future work, especially since I am doing this project besides a full-time job.
+The first things that might come to mind when talking about project setup are the engine and source control. As an engine I personally prefer Unity since I already have gathered some experience on the product and like the overall UX of using Unity.
+<br/>
+The choice of source control provider is somewhat more complicated though. Before this project I have always used Github, which I still think is an amazing service if you only need source control. 
+However, for this project I also want to bring some structure to my design process/documentation and use some issue system. The latter is still provided by github, but I could not find a suitable solution where I could easily integrate the issue system within the documentation.
+To better keep track of my progress and more easily bring my designs to life it is really helpful to reference different issues inside your documentation. Because of these reasons I have ended up with using the atlassian services (BitBucket, Jira, Confluence). 
+Sadly this does mean my main repository won't have a nice readme.md for first time visitors. However, for me this is a trade I'm willing to take.
+
+<h3><b>Current progress</b></h3>
+Since I have already worked some time on the game there is way more than just one thing to show here, so I had to make some selection. Last few weeks I have focused on creating reactive, fluid movements for my main character. 
+As well as a generic animation rig that can easily be re-used between different characters. Since I am still just a beginner in 3D models and animation I figured this would be great practice and would reduce quite a big chunk of workload along the way.
+
+<h3>Player Movement</h3>
+<table>
+    <th>
+      <div class='lead'>
+          The player at first will be very limited in its movement, before unlocking more power from recovering artifacts.
+          Because of this the basic movement of the player only has a few options. First of all standard WASD controls have been added to navigate up, left, down, right.
+          As a small addition I have also added a small dash, which allows the player to more easily dodge enemies or traps. 
+          This ability might later be added as an upgrade, but for now I like how it extends the basic movement set with some more flexibility.
+      </div>
+    </th>
+    <th style="width: 5%;"></th>
+    <th style="width: 25%;">
+      <img class="thumbnail" src="assets/images/blogs/first_steps/PlayerMovement.gif" />
+    </th>
+</table>
+
+<h3>Generic model</h3>
+<table>
+    <th style="width: 25%;">
+      <img class="thumbnail" style="width: 80%;" src="assets/images/blogs/first_steps/genericModel.png" />
+    </th>
+    <th style="width: 5%;"></th>
+    <th>
+      <div class='lead'>
+          As a base for most characters I have created a simple character model, with a really simple mesh.
+          The greatest benefit of keeping this model and rig so simple is that it will reduce work when developing new (humanoid) characters. 
+          For now this means I am working with a really simple generic model for both the player and the first enemy.
+          With this mesh I was able to create some really simple, derpy animations for walking, dashing and basic attack. 
+      </div>
+    </th>
+</table>
+
+<h3><b>What's next</b></h3>
+For the next dev blog I would like to implement basic combat, with one or two enemy variations as well as some basic treasure interactions. 
+This would allow me to implement the most basic game loop. With this also some main menu and scene transitions would most likely be required.
+
+Thanks for reading my first dev blog and hopefully speak to you in the next one!
+
+If you have any question, comments or suggestions you can contact me via the contact section of my portfolio page.

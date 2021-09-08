@@ -23,7 +23,12 @@ layout: compress
 
 .subheading {
     float: right;
-    font-size: 100%;
+    font-size: 80%;
+}
+
+.subheadingleft {
+    float: left;
+    font-size: 80%;
 }
 
 .headline {
@@ -37,7 +42,7 @@ layout: compress
 
 .headercontainer {
     font-size: 5%;
-    width: 50%;
+    width: 60%;
     
     margin: auto;
 }
