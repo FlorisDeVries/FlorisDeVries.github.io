@@ -2,8 +2,10 @@
   <div class='headline'>
     <div class='headercontainer'>
       <h1>{{ page.heading }}</h1>
-      {% if page.logo %}
-      <img src="{{page.logo | relative_url}}" alt="Logo" class="{{logoclass}}" />
+      {% if page.logoclass %}
+      <img src="{{page.logo | relative_url}}" alt="Logo" />
+      {% else %}
+      <img src="{{page.logo | relative_url}}" alt="Logo" class="Logo" />
       {% endif %}
       <h2>{{ page.subheading }}</h2>
     </div>
