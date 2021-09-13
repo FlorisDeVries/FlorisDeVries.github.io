@@ -3,7 +3,7 @@
     <div class='headercontainer'>
       <h1>{{ page.heading }}</h1>
       {% if page.logo %}
-      <img src="{{page.logo | relative_url}}" alt="Logo" class="logo" />
+      <img src="{{page.logo | relative_url}}" alt="Logo" class="{{logoclass}}" />
       {% endif %}
       <h2>{{ page.subheading }}</h2>
     </div>
