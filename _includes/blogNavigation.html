@@ -15,7 +15,7 @@
         <ul>
           {% for blog in site.blogs %}
           <li>
-            <a href='#{{ blog.id }}'>{{ blog.heading }}</a>
+            <a href='#{{ blog.id }}'>[{{blog.headerId}}] {{ blog.heading }}</a>
           </li>
           {% endfor %}
         </ul>

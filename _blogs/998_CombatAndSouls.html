@@ -1,0 +1,144 @@
+---
+id: first_steps
+headerId: "02"
+heading: Combat and Souls
+subheading: A productive month
+datum: 09/10/2021
+---
+
+Hi all!
+<br/><br/>
+Since my last blog post I have made a lot of progress on the game. So far the monthly devlog seems to be working as a motivator. However, since this is only the second post this might of course be a fluke...
+<br/><br/>
+As the title suggests I want to show some progress on combat and souls today, these are the major changes to the state of the game and overall game design, but this month I somehow managed even more. 
+Because of this and lack of inspiration I will skip the project setup section for this month and include a section on these other minor changes. Reading back on my previous devlog the project setup seems to be the least interesting part, but I might bring it back in future devlogs.
+<br/><br/>
+Now onto the actual devlog:
+
+<h3><b>Combat system</b></h3>
+My goal for the combat system of the game is to give the player a ton of flexibility. Where he can pick and choose between different abilities (which will hopefully be balanced). This means I had to put a structure that allowed for easy swapping of attacks.
+For this I am using the scriptableObjects component in Unity, which also allows for easier creation of additional abilities and ability variations. My first challenge with this system was creating a default player attack.
+
+<h3>Player Attack</h3>
+In every (combat)game the player character has some basic attack to achieve the first few steps in the game. However, in most cases this initial attack is soon forgotten since its either lacking the feel of impact... or actual impact in the game.
+<br/><br/>
+I wanted to do this slightly different, not forcing the player to use his default attack throughout the game, but by making it impactful right from the start. 
+<br/>
+The risk of such a starting point is of course that players might just stick with their default attack, never feeling the need to change to a different attack. Although not desirable, this is completely fine by me. 
+However, this does pose a different problem: The game would be extremely boring if the player has access to an end-game attack right away.
+<br/><br/>
+<table>
+    <th>
+      <div class='lead'>
+          To counter this problem I have given the default attack a handicap: The arc of the attack is random, meaning it could potentially be blocked by environment pieces, before reaching your actual target.
+          As you can see the GIF the initial default attack I implemented as a basic fire ball attack. As you might already tell from the GIF I also adjusted the floor tiles to a more bright color. 
+          I found the previous flooring to be a bit depressing as the default floor, but there is a high chance that the darker floor will re-appear in one of the dungeons, since I did like the overall aesthetic of the darker floor.
+      </div>
+    </th>
+    <th style="width: 5%;"></th>
+    <th style="width: 35%;">
+      <img class="thumbnail" style="width: 100%;" src="assets/images/blogs/combat_souls/BasicAttack.gif" />
+    </th>
+</table>
+
+<br/>
+<h3>Actual Combat</h3>
+Shooting walls can of course be fun, but it is much more exciting to actually fire your projectile at an hostile entity. Even more so if this enemy can also fight back/chase you.
+This month I have created a enemy character controller, using a finite state-machine. This enabled me to easily create a monster with the ability to chase and attack the player.
+<br/><br/>
+<table>
+    <th style="width: 35%;">
+      <img class="thumbnail" style="width: 100%;" src="assets/images/blogs/combat_souls/EnemyChase.gif" />
+    </th>
+    <th style="width: 5%;"></th>
+    <th>
+      <div class='lead'>
+          For now I decided to create a simple model for the enemy, which is a copy of the player, but with a red color. Since we all know red equals danger... right?
+          The "early stage" mummy is able to detect the player, even launch an melee attack and loose track of the player, which also shows a second attack: The melee attack!
+          <br/>
+          Since this attack is setup just like the previous fire ball attack I can easily give the player this attack. But that is not all: 
+      </div>
+    </th>
+</table>
+<br/>
+<br/>
+<table>
+    <th>
+      <div class='lead'>
+        The enemies are equipped with a similar ability system to the player. This means that not only can the player use all enemy attacks, all enemies can use the player attack as well, which can already result in some varied and fun combat.
+        To make a distinction between what attack should effect what group (player or enemies), factions were added. This is a system, which allows me to assign a faction to character, the character will only try and defeat characters from a different factions.
+        This simple solution used to make the attacks more generic could later be used for some fun faction mechanic in the game.
+       </div>
+    </th>
+    <th style="width: 5%;"></th>
+    <th style="width: 35%;">
+      <img class="thumbnail" style="width: 100%;" src="assets/images/blogs/combat_souls/Combat.gif" />
+    </th>
+</table>
+<br/>
+
+<h3><b>Souls</b></h3>
+You might have already spotted some souls in the combat section, where killed enemies dropped some blue essence. This essence represents some souls, in the previous devlog I talked a bit about <i>treasure</i>. 
+The souls are a replacement for this treasure. With this the setting of the game became as follows:
+<br/>
+You are Bastet, the egyptian goddess of the home, domesticity, women's secrets, cats, fertility, and childbirth.
+To provide new children into this world you keep a vault full of young souls, soon to descend upon the world. Something terrible has happened though and your vault has been raided. Your goal is to retrieve as many souls as possible!
+However, in there carelessness the thieves dropped souls all over the world and these souls have now taken all kinds of forms, some even got seduced to the side of the thieves and taken form in for example mummy form.
+With your portable soul cannister you descend upon the world.
+<br/><br/>
+<table>
+    <th style="width: 35%;">
+      <img class="thumbnail" style="width: 100%;" src="assets/images/blogs/combat_souls/Souls.gif" />
+    </th>
+    <th style="width: 5%;"></th>
+    <th>
+      <div class='lead'>
+          The souls you retrieve in the world are collected in this soul cannister and the more souls you collect the more powerful you become. 
+          Bringing this cannister to earth also has a great risk, it is your key to immortality. Everytime you die you will be brought back to life by the cannister, but if it is destroyed or too far away this will not happen.
+          <br/>
+          For me the creation of this soul cannister was a learning experience. I decided to make it with the unity VFX graph bundled with Unity shader graph; two component I only had very limited experience on.
+          For how inexperienced I was starting on this cannister I am very happy with the results and I think I will be able to make all sorts of visually pleasent VFX in the future with my newly learned skills.
+      </div>
+    </th>
+</table>
+<br/>
+
+<h3><b>Other progress</b></h3>
+Other than the highlighted progress in this devlog I have worked on the following items:
+<br/>
+<table>
+    <th>
+      <div class='lead'>
+        <br/>
+         - Destructable pots, which drop Souls
+        <br/>
+         - A first treasure room, as seen in this screenshot
+        <br/>
+         - UI: Basic main menu, HP bar, soul progress bar
+        <br/>
+         - (re)modeled a few environment pieces
+        <br/>
+         - A new color pallette
+        <br/>
+         - A game logo!
+        <br/>
+         - A more natural noise pattern for the floor tiles
+         <br/>
+         - And many more small additions.       
+    </div>
+    </th>
+    <th style="width: 5%;"></th>
+    <th style="width: 45%;">
+      <img class="thumbnail" style="width: 100%;" src="assets/images/blogs/combat_souls/TreasureRoom.png" />
+    </th>
+</table>
+
+<h3><b>Next steps</b></h3>
+For the coming month I have a whole bucket load of smaller changes planned, but also some bigger ones. For example, I want to finish the first game-loop.
+For now this would mean that the player starts at a main menu, loads up a level. Either completes or fails the level, which brings him to a game-over/victory screen. From there the player can restart or go back to the main menu.
+<br/>
+Since I am going to be working a lot on menus to achieve this I might also already include some settings screen dependant on how much time I have remaining. Other than that the biggest planned change would be to create some character model, both for the mummy and the player.
+<br/>
+Other changes I want to look into include: Health pickups; Mummy patrolling; More dungeon rooms; Basic non-generated dungeon; bug fix for the background shader, which currently overlaps all VFX
+<br/><br/>
+Thanks again for reading my devlog and hopefully see you in the next one.
