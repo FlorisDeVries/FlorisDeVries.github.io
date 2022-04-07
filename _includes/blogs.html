@@ -6,10 +6,10 @@
 
     {% if left == true %}
     <h2>{{ blog.heading }}<span class="subheading">[{{blog.headerId}}] {{ blog.subheading }}</span></h2>
-    <!-- <h5>{{ blog.datum }}</h3> -->
+    <!-- <h5>{{ blog.datum }}</h5> -->
     {% else %}
     <h2 style="text-align:right;">{{ blog.heading }}<span class="subheadingleft">{{ blog.subheading }} [{{blog.headerId}}]</span></h2>
-    <h5>{{ blog.datum }}</h3>
+    <!-- <h5>{{ blog.datum }}</h5> -->
     {% endif %}
     <table>
         <br />
