@@ -1,6 +1,6 @@
 # Project Setup Guide for Windows
 
-This README provides a step-by-step guide on how to set up a local environment for [Your Project's Name] on a clean Windows installation using Chocolatey.
+This README provides a step-by-step guide on how to set up a local environment on a clean Windows installation using Chocolatey.
 
 ## Prerequisites
 
