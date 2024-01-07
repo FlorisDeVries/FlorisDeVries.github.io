@@ -1,13 +1,16 @@
 <header>
   <div class='headline'>
     <div class='headercontainer'>
-      <h1>{{ page.heading }}</h1>
+      <div class="intro">
+        <h1 class="blue-text">Hello!</h1>
+        <h2>I'm Floris</h2>
+        <h3>Software Engineer and Technical Consultant with a Passion for Game Design</h3>
+      </div>
       {% if page.logoclass %}
-      <img src="{{page.logo | relative_url}}" alt="Logo" />
+        <img src="{{page.logo | relative_url}}" alt="Logo" />
       {% else %}
-      <img src="{{page.logo | relative_url}}" alt="Logo" class="logo" />
+        <img src="{{page.logo | relative_url}}" alt="Logo" class="logo" />
       {% endif %}
-      <h2>{{ page.subheading }}</h2>
     </div>
   </div>
 </header>
