@@ -1,16 +1,10 @@
-<header>
-  <div class='headline'>
-    <div class='headercontainer'>
-      <div class="intro">
-        <h1 class="blue-text">Hello!</h1>
-        <h2>I'm Floris</h2>
-        <h3>Software Engineer and Technical Consultant with a Passion for Game Design</h3>
-      </div>
-      {% if page.logoclass %}
-        <img src="{{page.logo | relative_url}}" alt="Logo" />
-      {% else %}
-        <img src="{{page.logo | relative_url}}" alt="Logo" class="logo" />
-      {% endif %}
-    </div>
-  </div>
+<header class="header">
+  <a href="#home" class="logo">Floris<span>DeV</span></a>
+
+  <nav class="navbar">
+    <a href='#about'>About</a>
+    <a href='#portfolio'>Portfolio</a>
+  </nav>
+
+  <a href="mailto:florisdev.me@gmail.com?Subject=Portfolio" class="contact" id="Contact">Contact Me</a>
 </header>

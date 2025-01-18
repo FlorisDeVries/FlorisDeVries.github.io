@@ -1,0 +1,28 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+  	{% include header.html %}
+    
+
+    <!-- Project Content -->
+    <main class="project-content">
+        <div class="project-info">
+        <img src="{{ page.logo | relative_url }}" alt="{{ page.title }}">
+        <ul>
+            <li><b>Platform:</b> {{ page.platform }}</li>
+        </ul>
+        </div>
+
+        <article>
+        {{ content }}
+        </article>
+    </main>
+
+  	<script src='{{ site.baseurl }}/assets/app.js'></script>
+	</body>
+</html>
+{% include footer.html %}

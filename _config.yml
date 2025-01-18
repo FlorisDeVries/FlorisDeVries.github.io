@@ -9,9 +9,13 @@ sass:
   sass_dir: /assets/_sass
   style: :compressed
 collections:
-  - features
-  - blogs
-  - projects
+  features:
+    output: true
+  blogs:
+    output: true
+  projects:
+    output: true
+    permalink: /projects/:id/
 exclude:
   - Gemfile
   - Gemfile.lock

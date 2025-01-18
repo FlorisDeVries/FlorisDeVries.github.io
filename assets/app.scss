@@ -1,95 +1,492 @@
----
-layout: compress
----
-
-@charset 'utf-8';
-@import 'bootstrap';
-
-@import 'layout';
-@import 'nav';
-@import 'header';
-@import 'main';
+--- 
+layout: compress 
+--- 
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-  }
-
-  .logo {
-    border-radius: 50%;
-    border: 2px solid #03A9F4;
-    width: 35%;
-    vertical-align: middle;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
-.subheading {
-    float: right;
-    font-size: 80%;
-    color:#03A9F4;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 12%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-.subheadingleft {
-    float: left;
-    font-size: 80%;
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-.blue-text {
-    color:#03A9F4;
+.logo:hover {
+    color: orangered;
+    text-shadow: 0 0 25px orangered,
+        0 0 50px orangered;
+    transform: scale(1.1);
 }
 
-.intro {
-    margin-right: 10%;
-    text-align: left;
-    width: 35%;
+.navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
 }
 
-.headline {
-    background-color: rgb(225, 225, 225);
+.navbar a:hover,
+.navbar a.active {
+    color: orangered;
+    border-bottom: 3px solid orangered;
 }
 
-.headercontainer {
-    font-size: 5%;
-    width: 60%;
-    display: flex; 
-    align-items: center; 
+.contact {
+    padding: 10px 28px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact:hover {
+    background-color: orangered;
+    box-shadow: 0 0 25px orangered;
+    color: white;
+}
+
+.filler {
+    background-color: green;
+    display: flex;
+    height: 100%;
+    width: 10%;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: auto;
+    gap: 10%;
+    padding: 30px 12% 0;
+}
+
+.home-content {
+    max-width: 700px;
+}
+
+.home-content h3 {
+    font-size: 42px;
+}
+
+.home-content h1 {
+    font-size: 62px;
+    line-height: 1.2;
+}
+
+span {
+    color: orangered;
+}
+
+.home-content p {
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+
+.btn-box {
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+
+.btn-1 {
+    padding: 15px 28px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-1:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.btn-2 {
+    padding: 15px 28px;
+    background-color: orangered;
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-2:hover {
+    background-color: white;
+    color: orangered;
+}
+
+.img-box img {
+    border-radius: 50%;
+    width: 550px;
+}
+
+
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+    background: black;
+}
+
+.about-img img {
+    position: relative;
+    width: 550px;
+    box-shadow: 0 0 25px orangered,
+        0 0 50px orangered;
+    border-radius: 50%;
+    top: 1rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    color: white;
+    font-size: 42px;
+}
+
+.about-content h3 {
+    font-size: 62px;
+    color: white;
+}
+
+.about-content a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-content a:hover {
+    text-decoration: underline;
+}
+
+.about-content p {
+    color: white;
+    font-size: 20px;
+    margin: 2em 0 3em;
+}
+
+.contact-form {
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size: 36px;
+}
+
+.contact-details {
+    padding: 10px 28px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.skills {
+    margin-top: 2em;
+}
+
+.skill {
+    margin-bottom: 1em;
+}
+
+.skill label {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.progress-bar {
+    background: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 8px;
+}
+
+.progress {
+    background: orangered;
+    height: 100%;
+    transition: width 0.3s ease;
 }
 
 .footer {
-    background: rgb(225, 225, 225);
-    height: fit-content;
-    vertical-align: middle;
-    align-content: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: black;
 }
 
-.icon {
-    float: right;
-    max-height: 100%;
-    max-width: 100%;
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.footer .social img.icon {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: white;
+    border: 2px solid orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2);
+    color: orangered;
+    border: 2px solid orangered;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid orangered;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li:hover {
+    opacity: 1;
+
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+
+/* Portfolio Section */
+.portfolio-summary {
+    margin-top: 2em;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.portfolio-summary a {
+    color: orangered;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.portfolio-summary a:hover {
+    text-decoration: underline;
+}
+
+#portfolio {
+    padding: 5% 8%;
+    background: rgb(241, 241, 241);
+    text-align: center;
+}
+
+#portfolio h2.portfolio-title {
+    font-size: 42px;
+    color: black;
+    margin-bottom: 2em;
+    font-weight: 600;
+}
+
+#portfolio h2.portfolio-title span {
+    color: orangered;
+    font-weight: 600;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Create uniform columns */
+    gap: 2em; /* Add spacing between cards */
+    padding: 0;
+    list-style: none;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+    position: relative; /* Allow absolute positioning within the card */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
     overflow: hidden;
-    margin-left: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensures the card spans the entire width of the grid cell */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Ensure title and image are stacked */
 }
 
-/* Create two equal columns that floats next to each other */
-.column {
-    vertical-align: middle;
-    float: left;
-    width: 50%;
-    height: 50px;
-    line-height: 30px;
-    padding: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+.portfolio-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+.portfolio-card:hover .portfolio-card-title {
+    opacity: 1; /* Show the title on hover */
+    transform: translateY(0); /* Reset any animation offset */
 }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+/* Thumbnail Image */
+.portfolio-thumbnail {
+    width: 100%; /* Thumbnail spans the full card width */
+    height: 200px; /* Fixed height for consistent card appearance */
+    object-fit: cover; /* Ensures image covers the area proportionally */
+    display: block;
 }
 
-.navbar {
-    background-color: rgb(225, 225, 225);
-    color:#03A9F4;
+.portfolio-card-title {
+    position: absolute; /* Position title over the image */
+    bottom: 0; /* Align to the bottom of the card */
+    left: 0;
+    width: 100%; /* Full width across the card */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white; /* White text for contrast */
+    padding: 10px 0; /* Add padding for the title */
+    text-align: center; /* Center the text */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in */
+}
+
+.portfolio-card-link {
+    text-decoration: none; /* Remove default link styling */
+    color: inherit; /* Ensure the text color stays consistent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card-link:hover .portfolio-card {
+    transform: translateY(-5px); /* Add hover effect to the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Project Page Styling */
+.project-header {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.project-header h1 {
+    font-size: 36px;
+    color: black;
+}
+
+.project-summary {
+    font-size: 18px;
+    color: gray;
+    margin-top: 0.5em;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    gap: 2em;
+}
+
+.project-info {
+    text-align: center;
+}
+
+.project-info img {
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.project-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-info ul li {
+    font-size: 16px;
+    margin: 0.5em 0;
+}
+
+article {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    color: #333;
 }
