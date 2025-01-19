@@ -1,13 +1,10 @@
-<header>
-  <div class='headline'>
-    <div class='headercontainer'>
-      <h1>{{ page.heading }}</h1>
-      {% if page.logoclass %}
-      <img src="{{page.logo | relative_url}}" alt="Logo" />
-      {% else %}
-      <img src="{{page.logo | relative_url}}" alt="Logo" class="logo" />
-      {% endif %}
-      <h2>{{ page.subheading }}</h2>
-    </div>
-  </div>
+<header class="header">
+  <a href="#home" class="logo">Floris<span>DeV</span></a>
+
+  <nav class="navbar">
+    <a href='#about'>About</a>
+    <a href='#portfolio'>Portfolio</a>
+  </nav>
+
+  <a href="mailto:florisdev.me@gmail.com?Subject=Portfolio" class="contact" id="Contact">Contact Me</a>
 </header>
