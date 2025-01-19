@@ -443,9 +443,37 @@ span {
     gap: 2em;
 }
 
+.project-content h3 {
+    margin-top: 2em;
+}
+
 .project-content a {
     color: $accent-color;
     font-weight: bold;
+}
+
+.project-content p {
+    margin-top: 1.5em;
+    line-height: 1.6;
+}
+
+.project-content ul {
+    display: block !important;
+    font-family: inherit;
+    list-style-type: disc !important;
+    list-style-position: outside !important; 
+    padding-left: 1.5em; 
+    margin-top: .5em;
+}
+
+.project-content ul::marker {
+    content: '•'; /* Explicitly set bullet content */
+    font-size: 1em; /* Ensure correct sizing */
+    color: currentColor; /* Use the current text color */
+}
+
+.project-content ul li {
+    display: list-item !important;
 }
 
 .project-content a:hover {
@@ -470,6 +498,34 @@ span {
 .project-info ul li {
     font-size: 16px;
     margin: 0.5em 0;
+}
+
+.project-date {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-images img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-images p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin-top: 0.5em;
 }
 
 article {

@@ -4,12 +4,14 @@
   </h2>
 
   <div class="portfolio-grid">
-    {% for project in site.projects %}
+    {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+    {% for project in sorted_projects %}
     <a href="{{ project.url }}" class="portfolio-card-link">
       <div class="portfolio-card">
         <img class="portfolio-thumbnail" src="{{ project.logo }}" alt="{{ project.title }}" />
         <div class="portfolio-card-title">
           <h3>{{ project.title }}</h3>
+          <p class="project-date">{{ project.date | date: "%Y-%m-%d" | default: "No Date" }}</p>
         </div>
       </div>
     </a>

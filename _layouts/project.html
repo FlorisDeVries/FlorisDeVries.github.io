@@ -22,6 +22,8 @@ id: project-layout
       <img src="{{ page.logo | relative_url }}" alt="{{ page.title }}">
       <ul>
         <li><b>Platform:</b> {{ page.platform }}</li>
+        <li><b>Start Date:</b> {{ page.start_date | date: "%Y-%m-%d" }}</li>
+        <li><b>End Date:</b> {{ page.end_date | date: "%Y-%m-%d" }}</li>
       </ul>
     </div>
 
@@ -35,7 +37,8 @@ id: project-layout
   <section id="related-projects" class="related-projects">
     <h2 class="portfolio-title">Other <span>Projects</span></h2>
     <div class="portfolio-grid">
-      {% for project in site.projects %}
+      {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+      {% for project in sorted_projects %}
       {% if project.id != page.id %}
       <a href="{{ project.url }}" class="portfolio-card-link">
         <div class="portfolio-card">
