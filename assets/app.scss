@@ -2,6 +2,14 @@
 layout: compress 
 --- 
 
+$secondary-color: black;
+$primary-color: white;
+$accent-color: #7E57C2;
+$background-color: #f1f1f1;
+$text-color: #333;
+$alt-text-color: #555;
+$nav-bar-color: rgba(0, 0, 0, 0.8);
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +25,7 @@ layout: compress
     left: 0;
     width: 100%;
     padding: 30px 12%;
-    background: rgba(0, 0, 0, 0.8);
+    background: $nav-bar-color;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -27,21 +35,21 @@ layout: compress
 
 .logo {
     font-size: 25px;
-    color: white;
+    color: $primary-color;
     font-weight: 600;
     transition: 0.3s ease;
 }
 
 .logo:hover {
-    color: orangered;
-    text-shadow: 0 0 25px orangered,
-        0 0 50px orangered;
+    color: $accent-color;
+    text-shadow: 0 0 25px $accent-color,
+        0 0 50px $accent-color;
     transform: scale(1.1);
 }
 
 .navbar a {
     font-size: 18px;
-    color: white;
+    color: $primary-color;
     font-weight: 500;
     margin: 0 20px;
     border-bottom: 3px solid transparent;
@@ -50,14 +58,14 @@ layout: compress
 
 .navbar a:hover,
 .navbar a.active {
-    color: orangered;
-    border-bottom: 3px solid orangered;
+    color: $accent-color;
+    border-bottom: 3px solid $accent-color;
 }
 
 .contact {
     padding: 10px 28px;
-    background-color: white;
-    color: black;
+    background-color: $primary-color;
+    color: $secondary-color;
     border: 2px solid transparent;
     border-radius: 8px;
     font-size: 16px;
@@ -67,27 +75,21 @@ layout: compress
 }
 
 .contact:hover {
-    background-color: orangered;
-    box-shadow: 0 0 25px orangered;
-    color: white;
-}
-
-.filler {
-    background-color: green;
-    display: flex;
-    height: 100%;
-    width: 10%;
+    background-color: $accent-color;
+    box-shadow: 0 0 25px $accent-color;
+    color: $primary-color;
 }
 
 .home {
     width: 100%;
     height: 100vh;
-    background: rgb(241, 241, 241);
+    background: $background-color;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10%;
     padding: 30px 12% 0;
+    box-sizing: border-box;
 }
 
 .home-content {
@@ -104,7 +106,7 @@ layout: compress
 }
 
 span {
-    color: orangered;
+    color: $accent-color;
 }
 
 .home-content p {
@@ -120,8 +122,8 @@ span {
 
 .btn-1 {
     padding: 15px 28px;
-    background-color: black;
-    color: white;
+    background-color: $secondary-color;
+    color: $primary-color;
     border: 2px solid transparent;
     border-radius: 8px;
     font-size: 18px;
@@ -132,16 +134,16 @@ span {
 }
 
 .btn-1:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border: 2px solid $secondary-color;
 }
 
 .btn-2 {
     padding: 15px 28px;
-    background-color: orangered;
-    color: white;
-    border: 2px solid black;
+    background-color: $accent-color;
+    color: $primary-color;
+    border: 2px solid $secondary-color;
     border-radius: 8px;
     font-size: 18px;
     letter-spacing: 1px;
@@ -151,12 +153,15 @@ span {
 }
 
 .btn-2:hover {
-    background-color: white;
-    color: orangered;
+    background-color: $primary-color;
+    color: $accent-color;
 }
 
 .img-box img {
+    border: 4px solid $accent-color;
     border-radius: 50%;
+    padding: 2px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 550px;
 }
 
@@ -169,31 +174,31 @@ span {
     align-items: center;
     padding: 12% 8%;
     gap: 10em;
-    background: black;
+    background: $secondary-color;
 }
 
 .about-img img {
     position: relative;
     width: 550px;
-    box-shadow: 0 0 25px orangered,
-        0 0 50px orangered;
+    box-shadow: 0 0 25px $accent-color,
+        0 0 50px $accent-color;
     border-radius: 50%;
     top: 1rem;
 }
 
 .about-content h2 {
     text-align: left;
-    color: white;
+    color: $primary-color;
     font-size: 42px;
 }
 
 .about-content h3 {
     font-size: 62px;
-    color: white;
+    color: $primary-color;
 }
 
 .about-content a {
-    color: white;
+    color: $primary-color;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -203,7 +208,7 @@ span {
 }
 
 .about-content p {
-    color: white;
+    color: $primary-color;
     font-size: 20px;
     margin: 2em 0 3em;
 }
@@ -217,8 +222,8 @@ span {
 
 .contact-details {
     padding: 10px 28px;
-    background-color: white;
-    color: black;
+    background-color: $primary-color;
+    color: $secondary-color;
     border: 2px solid transparent;
     border-radius: 8px;
     font-size: 16px;
@@ -227,47 +232,19 @@ span {
     transition: 0.3s ease;
 }
 
-.skills {
-    margin-top: 2em;
-}
-
-.skill {
-    margin-bottom: 1em;
-}
-
-.skill label {
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-.progress-bar {
-    background: #eee;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 8px;
-}
-
-.progress {
-    background: orangered;
-    height: 100%;
-    transition: width 0.3s ease;
-}
-
 .footer {
     position: relative;
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background-color: black;
+    background-color: $secondary-color;
+    margin-top: auto;
 }
 
 .footer .social {
     text-align: center;
     padding-bottom: 25px;
-    color: white;
+    color: $primary-color;
 }
 
 .footer .social img.icon {
@@ -280,8 +257,8 @@ span {
 
 .footer .social a {
     font-size: 24px;
-    color: white;
-    border: 2px solid orangered;
+    color: $primary-color;
+    border: 2px solid $accent-color;
     width: 40px;
     height: 40px;
     line-height: 38px;
@@ -289,14 +266,14 @@ span {
     text-align: center;
     border-radius: 50%;
     margin: 0 8px;
-    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    box-shadow: inset 0 0 10px $accent-color, 0 0 10px $accent-color;
     transition: 0.3s ease;
 }
 
 .footer .social a:hover {
     transform: scale(1.2);
-    color: orangered;
-    border: 2px solid orangered;
+    color: $accent-color;
+    border: 2px solid $accent-color;
 }
 
 .footer ul {
@@ -309,13 +286,13 @@ span {
 }
 
 .footer ul li a {
-    color: white;
+    color: $primary-color;
     border-bottom: 3px solid transparent;
     transition: 0.3s ease;
 }
 
 .footer ul li a:hover {
-    border-bottom: 3px solid orangered;
+    border-bottom: 3px solid $accent-color;
 }
 
 .footer ul li {
@@ -332,19 +309,19 @@ span {
     margin-top: 15px;
     text-align: center;
     font-size: 12px;
-    color: white;
+    color: $primary-color;
 }
 
 /* Portfolio Section */
 .portfolio-summary {
     margin-top: 2em;
     font-size: 16px;
-    color: #555;
+    color: $alt-text-color;
     line-height: 1.6;
 }
 
 .portfolio-summary a {
-    color: orangered;
+    color: $accent-color;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -356,19 +333,19 @@ span {
 
 #portfolio {
     padding: 5% 8%;
-    background: rgb(241, 241, 241);
+    background: $background-color;
     text-align: center;
 }
 
 #portfolio h2.portfolio-title {
     font-size: 42px;
-    color: black;
+    color: $secondary-color;
     margin-bottom: 2em;
     font-weight: 600;
 }
 
 #portfolio h2.portfolio-title span {
-    color: orangered;
+    color: $accent-color;
     font-weight: 600;
 }
 
@@ -383,85 +360,96 @@ span {
 
 /* Portfolio Card */
 .portfolio-card {
-    position: relative; /* Allow absolute positioning within the card */
-    background: white;
+    position: relative;
+    background: $primary-color;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Ensures the card spans the entire width of the grid cell */
+    width: 100%; 
     text-align: center;
     display: flex;
-    flex-direction: column; /* Ensure title and image are stacked */
+    flex-direction: column; 
 }
 
 .portfolio-card:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .portfolio-card:hover .portfolio-card-title {
-    opacity: 1; /* Show the title on hover */
-    transform: translateY(0); /* Reset any animation offset */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Thumbnail Image */
 .portfolio-thumbnail {
-    width: 100%; /* Thumbnail spans the full card width */
-    height: 200px; /* Fixed height for consistent card appearance */
-    object-fit: cover; /* Ensures image covers the area proportionally */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     display: block;
 }
 
 .portfolio-card-title {
-    position: absolute; /* Position title over the image */
-    bottom: 0; /* Align to the bottom of the card */
+    position: absolute;
+    bottom: 0;
     left: 0;
-    width: 100%; /* Full width across the card */
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    color: white; /* White text for contrast */
-    padding: 10px 0; /* Add padding for the title */
-    text-align: center; /* Center the text */
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: $primary-color;
+    padding: 10px 0;
+    text-align: center;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .portfolio-card-link {
-    text-decoration: none; /* Remove default link styling */
-    color: inherit; /* Ensure the text color stays consistent */
+    text-decoration: none;
+    color: inherit;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-card-link:hover .portfolio-card {
-    transform: translateY(-5px); /* Add hover effect to the card */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Project Page Styling */
 .project-header {
     text-align: center;
-    margin: 2em 0;
+    margin-bottom: 2em;
 }
 
 .project-header h1 {
     font-size: 36px;
-    color: black;
+    color: $secondary-color;
+    margin-bottom: 0.5em;
 }
 
 .project-summary {
     font-size: 18px;
-    color: gray;
-    margin-top: 0.5em;
+    color: $alt-text-color;
+    margin-top: 0;
 }
 
 .project-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2em;
+    padding: 200px 2em 2em;
     gap: 2em;
+}
+
+.project-content a {
+    color: $accent-color;
+    font-weight: bold;
+}
+
+.project-content a:hover {
+    text-decoration: underline;
 }
 
 .project-info {
@@ -488,5 +476,24 @@ article {
     font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
-    color: #333;
+    color: $text-color;
+}
+
+.related-projects {
+    padding: 5% 8%;
+    margin-top: 4em;
+    background: $background-color;
+    text-align: center;
+}
+
+.related-projects h2.portfolio-title {
+    font-size: 36px;
+    color: $secondary-color;
+    margin-bottom: 2em;
+    font-weight: 600;
+}
+
+.related-projects h2.portfolio-title span {
+    color: $accent-color;
+    font-weight: 600;
 }

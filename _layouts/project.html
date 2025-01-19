@@ -1,28 +1,58 @@
 ---
 layout: compress
+id: project-layout
 ---
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body>
-  	{% include header.html %}
-    
+{% include head.html %}
 
-    <!-- Project Content -->
-    <main class="project-content">
-        <div class="project-info">
-        <img src="{{ page.logo | relative_url }}" alt="{{ page.title }}">
-        <ul>
-            <li><b>Platform:</b> {{ page.platform }}</li>
-        </ul>
+<body>
+  {% include header_project.html %}
+
+  <!-- Project Content -->
+  <main id="description" class="project-content">
+    <!-- Project Title -->
+    <header class="project-header">
+      <h1><span>{{ page.title }}</span></h1>
+      <p class="project-summary">{{ page.summary }}</p>
+    </header>
+
+    <!-- Project Info -->
+    <div class="project-info">
+      <img src="{{ page.logo | relative_url }}" alt="{{ page.title }}">
+      <ul>
+        <li><b>Platform:</b> {{ page.platform }}</li>
+      </ul>
+    </div>
+
+    <!-- Project Description -->
+    <article>
+      {{ content }}
+    </article>
+  </main>
+
+  <!-- Related Projects -->
+  <section id="related-projects" class="related-projects">
+    <h2 class="portfolio-title">Other <span>Projects</span></h2>
+    <div class="portfolio-grid">
+      {% for project in site.projects %}
+      {% if project.id != page.id %}
+      <a href="{{ project.url }}" class="portfolio-card-link">
+        <div class="portfolio-card">
+          <img class="portfolio-thumbnail" src="{{ project.logo | relative_url }}" alt="{{ project.title }}">
+          <div class="portfolio-card-title">
+            <h3>{{ project.title }}</h3>
+          </div>
         </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
 
-        <article>
-        {{ content }}
-        </article>
-    </main>
 
-  	<script src='{{ site.baseurl }}/assets/app.js'></script>
-	</body>
+  <script src="{{ site.baseurl }}/assets/app.js"></script>
+</body>
+
 </html>
 {% include footer.html %}
