@@ -10,6 +10,47 @@ $text-color: #333;
 $alt-text-color: #555;
 $nav-bar-color: rgba(0, 0, 0, 0.8);
 
+
+@media (max-width: 800px) {
+    .navbar {
+        display: none;
+        /* Hide nav links on small screens */
+    }
+
+    .hamburger-menu {
+        display: block;
+        /* Show hamburger menu on small screens */
+        cursor: pointer;
+        font-size: 24px;
+        color: $primary-color;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-box img {
+        width: 5px;
+    }
+
+    .about {
+        flex-direction: column;
+        /* Stack text and image */
+        text-align: center;
+        padding: 20px 5%;
+    }
+
+    .about-content {
+      max-width: 100%;
+    }
+  
+    .about-img img {
+      width: 200px; /* Smaller image size */
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +65,8 @@ $nav-bar-color: rgba(0, 0, 0, 0.8);
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 12%;
+    padding: 20px 5%;
+    /* Adjust padding for smaller screens */
     background: $nav-bar-color;
     backdrop-filter: blur(10px);
     display: flex;
@@ -47,8 +89,14 @@ $nav-bar-color: rgba(0, 0, 0, 0.8);
     transform: scale(1.1);
 }
 
+.navbar {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
 .navbar a {
-    font-size: 18px;
+    font-size: 16px;
     color: $primary-color;
     font-weight: 500;
     margin: 0 20px;
@@ -61,6 +109,7 @@ $nav-bar-color: rgba(0, 0, 0, 0.8);
     color: $accent-color;
     border-bottom: 3px solid $accent-color;
 }
+
 
 .contact {
     padding: 10px 28px;
@@ -163,10 +212,8 @@ span {
     padding: 2px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 550px;
+    max-width: 100%;
 }
-
-
-
 
 .about {
     display: flex;
@@ -352,8 +399,10 @@ span {
 /* Portfolio Grid */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Create uniform columns */
-    gap: 2em; /* Add spacing between cards */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Create uniform columns */
+    gap: 2em;
+    /* Add spacing between cards */
     padding: 0;
     list-style: none;
 }
@@ -366,16 +415,17 @@ span {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; 
+    width: 100%;
     text-align: center;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .portfolio-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .portfolio-card:hover .portfolio-card-title {
     opacity: 1;
     transform: translateY(0);
@@ -461,15 +511,18 @@ span {
     display: block !important;
     font-family: inherit;
     list-style-type: disc !important;
-    list-style-position: outside !important; 
-    padding-left: 1.5em; 
+    list-style-position: outside !important;
+    padding-left: 1.5em;
     margin-top: .5em;
 }
 
 .project-content ul::marker {
-    content: '•'; /* Explicitly set bullet content */
-    font-size: 1em; /* Ensure correct sizing */
-    color: currentColor; /* Use the current text color */
+    content: '•';
+    /* Explicitly set bullet content */
+    font-size: 1em;
+    /* Ensure correct sizing */
+    color: currentColor;
+    /* Use the current text color */
 }
 
 .project-content ul li {
@@ -505,6 +558,7 @@ span {
     color: gray;
     margin-top: 5px;
 }
+
 .project-images {
     display: flex;
     flex-direction: column;
