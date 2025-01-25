@@ -1,5 +1,5 @@
---- 
-layout: compress 
+---
+layout: compress
 --- 
 
 $secondary-color: black;
@@ -10,24 +10,19 @@ $text-color: #333;
 $alt-text-color: #555;
 $nav-bar-color: rgba(0, 0, 0, 0.8);
 
-
 @media (max-width: 800px) {
-    .navbar {
-        display: none;
-        /* Hide nav links on small screens */
+    .home-content {
+        padding-top: 45%;
     }
 
-    .hamburger-menu {
-        display: block;
-        /* Show hamburger menu on small screens */
-        cursor: pointer;
-        font-size: 24px;
-        color: $primary-color;
+    .navbar {
+        display: none;
     }
 
     .home {
         flex-direction: column;
         text-align: center;
+        overflow: hidden;
     }
 
     .img-box img {
@@ -42,11 +37,17 @@ $nav-bar-color: rgba(0, 0, 0, 0.8);
     }
 
     .about-content {
-      max-width: 100%;
+        max-width: 100%;
     }
-  
+
+    .img-box {
+        max-width: 50%;
+        max-height: 100%;
+    }
+
     .about-img img {
-      width: 200px; /* Smaller image size */
+        object-fit: contain;
+        display: block;
     }
 }
 
@@ -90,7 +91,6 @@ $nav-bar-color: rgba(0, 0, 0, 0.8);
 }
 
 .navbar {
-    display: flex;
     gap: 1em;
     flex-wrap: wrap;
 }
