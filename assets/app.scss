@@ -260,6 +260,28 @@ span {
     margin: 2em 0 3em;
 }
 
+.about-content ul {
+    color: $primary-color;
+    font-size: 18px;
+    margin: 1.5em 0;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.about-content ul li {
+    margin: 1em 0;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.about-content ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: $accent-color;
+    font-weight: bold;
+}
+
 .contact-form {
     text-align: center;
     margin-top: 3em;
@@ -357,6 +379,14 @@ span {
     text-align: center;
     font-size: 12px;
     color: $primary-color;
+}
+
+.footer .kvk-number {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: $primary-color;
+    opacity: 0.8;
 }
 
 /* Portfolio Section */
