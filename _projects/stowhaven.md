@@ -1,10 +1,10 @@
 ---
 layout: project
-id: backup_api
-title: Backup API
+id: stowhaven
+title: Stowhaven
 summary: A low-cost, cloud-native backup platform
 platform: .NET 10, Azure
-logo: assets/images/projects/BackupApi/ArchitecturePlaceholder.svg
+logo: assets/images/projects/Stowhaven/ArchitecturePlaceholder.svg
 date: 2026-08-17
 start_date: 2025-09-07
 ongoing: true
@@ -12,12 +12,12 @@ ongoing: true
 
 ## Project Overview
 
-**Backup API** is a cloud-native backup platform built with **.NET 10**, **Azure Container Apps**, **Dapr**, **Azure Blob Storage**, and **Azure Cosmos DB for NoSQL**. It is designed to keep the control plane small and inexpensive: the API coordinates each backup, but the client sends the actual file data directly to Blob Storage.
+**Stowhaven** is a cloud-native backup platform built with **.NET 10**, **Azure Container Apps**, **Dapr**, **Azure Blob Storage**, and **Azure Cosmos DB for NoSQL**. It is designed to keep the control plane small and inexpensive: the API coordinates each backup, but the client sends the actual file data directly to Blob Storage.
 
 The repository contains the complete platform, including a public gateway, an internal API, a background worker, a cross-platform backup client, shared libraries, infrastructure-as-code, and the CI/CD workflow used to deploy it.
 
 <div class="project-images">
-  <img src="/assets/images/projects/BackupApi/ArchitecturePlaceholder.svg" alt="Placeholder for the high-level Backup API architecture" class="project-image" />
+  <img src="/assets/images/projects/Stowhaven/ArchitecturePlaceholder.svg" alt="Placeholder for the high-level Stowhaven architecture" class="project-image" />
   <p><b>Suggested main image:</b> A high-level architecture overview showing the client, gateway, API, queue, worker, Blob Storage, Cosmos DB, and Application Insights. The direct upload path to Blob Storage should be visually distinct from the control flow.</p>
 </div>
 
