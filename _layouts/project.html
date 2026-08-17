@@ -23,7 +23,11 @@ id: project-layout
       <ul>
         <li><b>Platform:</b> {{ page.platform }}</li>
         <li><b>Start Date:</b> {{ page.start_date | date: "%Y-%m-%d" }}</li>
+        {% if page.ongoing %}
+        <li><b>Status:</b> Ongoing</li>
+        {% else %}
         <li><b>End Date:</b> {{ page.end_date | date: "%Y-%m-%d" }}</li>
+        {% endif %}
       </ul>
     </div>
 
