@@ -4,7 +4,7 @@ id: stowhaven
 title: Stowhaven
 summary: A low-cost, cloud-native backup platform
 platform: .NET 10, Azure
-logo: assets/images/projects/StowhavenHighLevelArchitecture.drawio.png
+logo: assets/images/projects/Stowhaven/StowhavenHighLevelArchitecture.drawio.png
 date: 2026-08-17
 start_date: 2025-09-07
 ongoing: true
