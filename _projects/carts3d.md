@@ -4,7 +4,7 @@ id: carts_3d
 title: Carts 3D
 summary: An RTS where deck-building is the tech tree
 platform: Godot 4, C#
-logo: assets/images/projects/Carts3D/EarlyScreenshot.pmg
+logo: assets/images/projects/Carts3D/EarlyScreenshot.png
 date: 2026-08-17
 start_date: 2026-08-09
 ongoing: true
