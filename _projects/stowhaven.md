@@ -4,7 +4,7 @@ id: stowhaven
 title: Stowhaven
 summary: A low-cost, cloud-native backup platform
 platform: .NET 10, Azure
-logo: assets/images/projects/Stowhaven/ArchitecturePlaceholder.svg
+logo: assets/images/projects/StowhavenHighLevelArchitecture.drawio.png
 date: 2026-08-17
 start_date: 2025-09-07
 ongoing: true
@@ -17,7 +17,7 @@ ongoing: true
 The repository contains the complete platform, including a public gateway, an internal API, a background worker, a cross-platform backup client, shared libraries, infrastructure-as-code, and the CI/CD workflow used to deploy it.
 
 <div class="project-images">
-  <img src="/assets/images/projects/Stowhaven/ArchitecturePlaceholder.svg" alt="Placeholder for the high-level Stowhaven architecture" class="project-image" />
+  <img src="/assets/images/projects/Stowhaven/StowhavenHighLevelArchitecture.drawio.png" alt="Placeholder for the high-level Stowhaven architecture" class="project-image" />
   <p><b>Suggested main image:</b> A high-level architecture overview showing the client, gateway, API, queue, worker, Blob Storage, Cosmos DB, and Application Insights. The direct upload path to Blob Storage should be visually distinct from the control flow.</p>
 </div>
 
@@ -57,4 +57,4 @@ That challenge succeeded. By keeping the control plane small and sending backup 
 
 ### Source Code
 
-The complete platform and its technical documentation are available on [GitHub](https://github.com/FlorisDeVries/backup-api).
+The complete platform and its technical documentation are available on [GitHub](https://github.com/FlorisDeVries/stowhaven).
