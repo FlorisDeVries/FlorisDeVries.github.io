@@ -34,9 +34,9 @@ The platform separates its responsibilities across three services:
 - The **Backup Worker** consumes queued commit events, validates staged files, moves active versions into place, retires older versions, and updates authoritative state.
 
 This separation keeps large uploads away from the application services. After starting a run, the client receives a short-lived, directory-scoped User Delegation SAS and uploads new or changed files directly to Blob Storage. The API then publishes a commit event through a Dapr binding, allowing the worker to finish the run asynchronously.
+<br>
+<br>
 
-<br>
-<br>
 ---
 
 <br>
@@ -51,9 +51,9 @@ Backups are incremental, so only new and changed files are uploaded. Active file
 The .NET client scans configured targets, applies `.backupignore` rules, uploads files, and waits for commit completion. It supports interactive first-time configuration while keeping scheduled backup and restore runs silent. The Linux installer sets up a user-owned systemd timer, and the client is also suitable for Windows Task Scheduler.
 
 For local development, Docker Compose starts the services alongside Dapr, Azurite, SQLite, and the Aspire dashboard. In production, Bicep defines the Azure resources and GitHub Actions validates, builds, publishes, and deploys the platform in phases. Application Insights and Log Analytics provide tracing and operational visibility.
+<br>
+<br>
 
-<br>
-<br>
 ---
 
 <br>

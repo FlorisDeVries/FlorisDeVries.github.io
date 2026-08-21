@@ -19,12 +19,12 @@ The goal is a focused, single-player PvE experience with matches of roughly thir
 <div class="project-images">
   <img src="/assets/images/projects/Carts3D/EarlyScreenshot.png" alt="Placeholder for a Carts 3D gameplay overview" class="project-image" />
 </div>
+<br>
+<br>
 
-<br>
-<br>
 ---
-<br>
 
+<br>
 ## The Core Experiment
 
 The deck is both the player's build menu and technology tree. Unit cards deploy combat units, building cards expand the base and economy, upgrade cards improve what is already on the field, and spell cards create one-time effects. New cards are earned through exploration, technology buildings, and objectives.
@@ -32,9 +32,9 @@ The deck is both the player's build menu and technology tree. Unit cards deploy 
 The main experiment is the deterministic card cycle. When the draw pile runs out, the discard pile becomes the new deck **without being shuffled**. The order in which cards are played therefore determines the order in which they return, making card sequencing a resource the player can plan around.
 
 The planned map consists of connected hexagonal nodes containing outposts, optional objectives, enemy camps, and a final boss. Enemy waves create the pressure to keep expanding, while exploring can reward the player with new cards or weaken the boss before the final fight.
+<br>
+<br>
 
-<br>
-<br>
 ---
 
 <br>
