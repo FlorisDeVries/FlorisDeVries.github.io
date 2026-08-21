@@ -4,7 +4,7 @@ id: carts_3d
 title: Carts 3D
 summary: An RTS where deck-building is the tech tree
 platform: Godot 4, C#
-logo: assets/images/projects/Carts3D/GameplayOverviewPlaceholder.svg
+logo: assets/images/projects/Carts3D/EarlyScreenshot.pmg
 date: 2026-08-17
 start_date: 2026-08-09
 ongoing: true
@@ -17,11 +17,13 @@ ongoing: true
 The goal is a focused, single-player PvE experience with matches of roughly thirty minutes. Each match starts slowly as the player establishes an economy, then steadily increases the pressure through enemy waves and exploration until the player is ready to confront the final boss. The project is still at an early, experimental stage, so these ideas will continue to change as I prototype them.
 
 <div class="project-images">
-  <img src="/assets/images/projects/Carts3D/GameplayOverviewPlaceholder.svg" alt="Placeholder for a Carts 3D gameplay overview" class="project-image" />
-  <p><b>Suggested screenshot:</b> An in-game view showing the current state of the experiment, ideally with the card hand and some of the playable world visible.</p>
+  <img src="/assets/images/projects/Carts3D/EarlyScreenshot.png" alt="Placeholder for a Carts 3D gameplay overview" class="project-image" />
 </div>
 
+<br>
+<br>
 ---
+<br>
 
 ## The Core Experiment
 
@@ -31,8 +33,11 @@ The main experiment is the deterministic card cycle. When the draw pile runs out
 
 The planned map consists of connected hexagonal nodes containing outposts, optional objectives, enemy camps, and a final boss. Enemy waves create the pressure to keep expanding, while exploring can reward the player with new cards or weaken the boss before the final fight.
 
+<br>
+<br>
 ---
 
+<br>
 ## Technical Direction and Scope
 
 The game is being developed in **Godot 4** as a 3D project with **C#/.NET** scripting and a top-down camera. The first target is one complete single-player match with a fixed starting deck, exploration, escalating waves, and a final boss. The focus is currently on testing the core loop rather than producing lots of content or polished artwork.
